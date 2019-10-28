@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible">
+</head>
+<body>
+</body>
+<script src="alasql.js"></script>
+<script src="xlsx.core.min.js"></script>
+<script>
+	var arr = [
+      {
+        "姓名":"喵喵喵",
+        "年龄":1,
+      },
+      {
+        "姓名":"喵喵",
+        "年龄":2,
+      }
+    ];
+    alasql('SELECT * INTO XLS("报表.xls",{headers:true}) FROM ?',[arr]);
+</script>
+</html>
